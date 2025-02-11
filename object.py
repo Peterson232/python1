@@ -1,4 +1,4 @@
-from classes import Student, Person, Vehicle, Rectangle
+from classes import Student, Person, Vehicle, Rectangle, My_Employee, Developer, Teacher, Hourly_Employee, BankAccount
 
 student1 = Student()
 print(student1.first_name)
@@ -38,5 +38,25 @@ Measurement = Rectangle(10, 10)
 print(f'The width entered is: {Measurement.width}')
 print(f'The length entered is: {Measurement.length}')
 
+my_employee1 = My_Employee("Esther",100000,"Female",21)
+my_employee2 = My_Employee("June",150000,"Female",19)
+print(my_employee1.basic_salary)
+print(my_employee2.gender)
+print(my_employee1.my_salary())
+print(my_employee2.my_salary())
+developer1 = Developer("Tom",230000,"male",33,"Python")
+developer2 = Developer("Mary",200000,"female",23,"HTML")
+print(developer1.my_salary())
+print(developer2.my_salary())
+teacher1 = Teacher("Grace",60000,"Female",24,"English",2016)
+teacher2 = Teacher("Mwaura",50000,"male",24,"Kiswahili",2020)
+print(teacher1.subject)
+print(teacher2.yearofteaching)
+print(teacher1.my_salary())
 
+hourly_employee1 = Hourly_Employee("Jeff",23000,"Male",20,1000,12)
+hourly_employee2 = Hourly_Employee("Jane",25000,"Female",19,1000,10)
+print(hourly_employee1.hourly_employee_salary())
 
+client1 = BankAccount(2456,"Benson Kiari","salary_account",500000,"Umoja Bank")
+print(f'Your new balance is: {client1.deposit()} and you deposited: {client1.deposit_amount}')
